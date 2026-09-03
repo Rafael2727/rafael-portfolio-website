@@ -7,9 +7,9 @@ export const SITE_CONFIG: SiteConfig = {
     location: 'Philippines',
     resumeUrl: '/resume.pdf',
     socials: {
-        github: 'https://github.com/rafaelbatnag',
+        github: 'https://github.com/Rafael2727',
         facebook: 'https://facebook.com/rafaelbatnag',
-        email: 'rafael@example.com',
+        email: 'batnagrafael27@gmail.com',
     },
 };
 
