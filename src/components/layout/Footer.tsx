@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           <img
-            src="/logo.png"
+            src={`${import.meta.env.BASE_URL}rblogo.png`}
             alt={`${SITE_CONFIG.name} Logo`}
             className="h-8 w-auto dark:invert"
           />
@@ -36,17 +36,6 @@ export const Footer: React.FC = () => {
             &copy; {currentYear} {SITE_CONFIG.name}. All rights reserved.
           </p>
         </div>
-
-        {SITE_CONFIG.socials.linkedin && (
-          <a
-            href={SITE_CONFIG.socials.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-slate-900 dark:hover:text-white transition-colors"
-          >
-            <LinkedinIcon className="w-5 h-5" />
-          </a>
-        )}
 
         <div className="flex items-center gap-4 text-slate-600 dark:text-slate-400">
           <a
@@ -57,14 +46,16 @@ export const Footer: React.FC = () => {
           >
             <GithubIcon className="w-5 h-5" />
           </a>
-          <a
-            href={SITE_CONFIG.socials.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-slate-900 dark:hover:text-white transition-colors"
-          >
-            <LinkedinIcon className="w-5 h-5" />
-          </a>
+          {SITE_CONFIG.socials.linkedin && (
+            <a
+              href={SITE_CONFIG.socials.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-slate-900 dark:hover:text-white transition-colors"
+            >
+              <LinkedinIcon className="w-5 h-5" />
+            </a>
+          )}
           {SITE_CONFIG.socials.facebook && (
             <a
               href={SITE_CONFIG.socials.facebook}
