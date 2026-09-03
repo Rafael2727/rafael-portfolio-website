@@ -1,5 +1,5 @@
 import React from 'react';
-import { SITE_CONFIG, NAV_LINKS } from '../../utils/constants';
+import { SITE_CONFIG } from '../../utils/constants';
 import { Mail } from 'lucide-react';
 
 const GithubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
