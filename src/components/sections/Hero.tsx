@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
 
                         <div className="relative flex flex-col items-center justify-center p-2 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden">
                             <img
-                                src="/profile.png"
+                                src="profile.png"
                                 alt={`${SITE_CONFIG.name}`}
                                 className="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-2xl transition-transform duration-500 group-hover:scale-102"
                             />

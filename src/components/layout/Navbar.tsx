@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
           <img
-            src="/logo.png"
+            src="rblogo.png"
             alt={`${SITE_CONFIG.name} Logo`}
             className="h-9 w-auto dark:invert transition-transform duration-300 group-hover:scale-105"
           />
