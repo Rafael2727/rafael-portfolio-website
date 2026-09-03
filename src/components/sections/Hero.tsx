@@ -17,12 +17,6 @@ const Facebook: React.FC<IconProps> = (props) => (
     </svg>
 );
 
-const Linkedin: React.FC<IconProps> = (props) => (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-    </svg>
-);
-
 export const Hero: React.FC = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
@@ -73,16 +67,6 @@ export const Hero: React.FC = () => {
                         <a href={SITE_CONFIG.socials.github} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                             <Github className="w-6 h-6" />
                         </a>
-                        {SITE_CONFIG.socials.linkedin && (
-                            <a
-                                href={SITE_CONFIG.socials.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-                            >
-                                <Linkedin className="w-6 h-6" />
-                            </a>
-                        )}
                         {SITE_CONFIG.socials.facebook && (
                             <a href={SITE_CONFIG.socials.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                                 <Facebook className="w-6 h-6" />
@@ -97,7 +81,6 @@ export const Hero: React.FC = () => {
                 {/* Hero Right Column: Profile Picture */}
                 <div className="lg:col-span-5 flex justify-center">
                     <div className="relative group p-4 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl transition-all duration-500 hover:scale-105">
-                        {/* Glowing backdrop effect */}
                         <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
 
                         <div className="relative flex flex-col items-center justify-center p-2 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden">
