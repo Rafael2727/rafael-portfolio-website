@@ -30,7 +30,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm i
 
       - name: Build Project
         run: npm run build
@@ -45,4 +45,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4git add .
+        uses: actions/deploy-pages@v4
