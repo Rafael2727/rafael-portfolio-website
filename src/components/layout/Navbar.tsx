@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
           <img
-            src="rblogo.png"
+            src={`${import.meta.env.BASE_URL}rblogo.png`}
             alt={`${SITE_CONFIG.name} Logo`}
             className="h-9 w-auto dark:invert transition-transform duration-300 group-hover:scale-105"
           />
@@ -32,7 +32,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         <nav className="hidden md:flex items-center space-x-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link: { label: string; href: string }) => (
             <a
               key={link.label}
               href={link.href}
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={toggleDarkMode}
             aria-label="Toggle Theme"
-            className="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
           >
             {isDarkMode ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5" />}
           </button>
@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
 
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-4 space-y-2">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link: { label: string; href: string }) => (
             <a
               key={link.label}
               href={link.href}
